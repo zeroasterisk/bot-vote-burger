@@ -8,15 +8,15 @@ node_js:
 env:
   - DEBUG=nightmare
 
-#build:
+build:
 #  pre_ci:
 #    docker build -t eltoro/vote-for-burger:latest .
-#  ci:
-#    docker run -it --rm --name voter eltoro/vote-for-burger:latest
+  ci:
+    docker run -it --rm --name voter eltoro/vote-for-burger:latest
 
-before_script:
-  - npm install vo
+#before_script:
+#  - npm install vo
 
-script:
-  - xvfb-run --server-args="-screen 0 1024x768x24" node index.js
+#script:
+#  - xvfb-run --server-args="-screen 0 1024x768x24" node index.js
 
